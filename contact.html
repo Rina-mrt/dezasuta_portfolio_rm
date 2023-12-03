@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>もりたりな portfolio site</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="imge/png" href="imges/favicon.png">
+    <script>
+        (function(d) {
+          var config = {
+            kitId: 'cjq4hqp',
+            scriptTimeout: 3000,
+            async: true
+          },
+          h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+        })(document);
+    </script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="LOADING">
+        <div class="spinner"></div>
+    </div>
+
+    <header id="CONTACT">
+        <div>
+            <h1><a href="index.html">Rina<br>Morita</a></h1>
+
+            <nav class="pc-nav">
+                <ul class="pc-nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#CONCEPT">Concept</a></li>
+                    <li><a href="works.html">Works</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="#CONTACT">Contact</a></li>
+                    <li><a href="">Change</a></li>
+                    <li><a href=""><img src="imges/insta.png" alt="インスタグラムへのリンク用アイコン"></a></li>
+                </ul>
+            </nav>
+
+            <div class="hamburger">menu<span></span></div>
+            <nav class="sp-nav">
+                <ul class="sp-nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#CONCEPT">Concept</a></li>
+                    <li><a href="works.html">Works</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="#CONTACT">Contact</a></li>
+                    <li><a href="">Change</a></li>
+                    <li><a href=""><img src="imges/insta.png" alt="インスタグラムへのリンク用アイコン"></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div>
+            <h2 class="page-title">Contact</h2>
+            <p class="j-title page-j-title">お問い合わせ</p>
+        </div>
+    
+        <p class="contact-text">ご不明点などがございましたら、<br><span class="new-line2">こちらのフォームより</span>お問い合わせお願いいたします。</p>
+        
+        <div>
+            <p class="contact-nn">※ すべて必須項目です ※</p>
+    
+            <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeyTAOm1ai09CtOk1q3UzgrSwsWnO39jEnNIU2eyGI66B_qsw/formResponse?pli=1"
+                method="post" target="hidden_iframe" onsubmit="submitted=true;">
+                <div class="form-label">
+                    <label for="your-name">お名前</label>
+                        <input id="your-name" type="text" name="entry.2005620554" required>
+                </div>
+                <div>
+                    <label for="your-email">メールアドレス</label>
+                    <input id="your-email" type="email" name="entry.1045781291" required>
+                </div>
+                <div>
+                    <label for="your-phone">電話番号</label>
+                    <input id="your-phone" type="tel" pattern="[0-9]{2-4}[0-9]{2-4}[0-9]{4}" name="entry.1166974658" required>
+                </div>
+                <div>
+                    <label for="your-message">お問い合わせ内容</label>
+                    <textarea id="your-message" name="entry.839337160" required></textarea>
+                </div>
+                <p class="contact-text2">入力内容に誤りはございませんか？</p>
+                <input type="submit" class="send" value="送信">
+            </form>
+        </div>
+    </main>
+    
+    <footer class="works-footer">
+        <div>
+            <p>©︎　Rina Morita</p>
+        </div>
+    </footer>
+
+    <script>
+        window.onload = function() {
+            const spinner = document.getElementById('LOADING');
+            spinner.classList.add('loaded');
+          }
+
+        $(function () {
+            $('.hamburger, .sp-nav a').on('click', function (){
+                $('.sp-nav').fadeToggle();
+                $('.hamburger').toggleClass('open')
+            });
+        });
+    </script>
+
+    <script type="text/javascript">
+        var submitted = false;
+    </script>
+    <iframe
+        name="hidden_iframe"
+        id="hidden_iframe"
+        style="display: none"
+        onload="if(submitted)  {window.location='thanks.html';}"></iframe>
+</body>
+</html>

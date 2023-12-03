@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>もりたりな portfolio site</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="imge/png" href="imges/favicon.png">
+    <script>
+        (function(d) {
+          var config = {
+            kitId: 'cjq4hqp',
+            scriptTimeout: 3000,
+            async: true
+          },
+          h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+        })(document);
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="LOADING">
+        <div class="spinner"></div>
+    </div>
+
+    <header>
+        <div>
+            <h1><a href="index.html">Rina<br>Morita</a></h1>
+
+            <nav class="pc-nav">
+                <ul class="pc-nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#CONCEPT">Concept</a></li>
+                    <li><a href="works.html">Works</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="">Change</a></li>
+                    <li><a href=""><img src="imges/insta.png" alt="インスタグラムへのリンク用アイコン"></a></li>
+                </ul>
+            </nav>
+
+            <div class="hamburger">menu<span></span></div>
+            <nav class="sp-nav">
+                <ul class="sp-nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#CONCEPT">Concept</a></li>
+                    <li><a href="works.html">Works</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="">Change</a></li>
+                    <li><a href=""><img src="imges/insta.png" alt="インスタグラムへのリンク用アイコン"></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div>
+            <h2 class="page-title th-page-title"><span class="new-line2">Thank</span> you.</h2>
+            <p class="j-title page-j-title th-text1"><span class="new-line2">お問い合わせいただき、</span>ありがとうございます。</p>
+        </div>
+    
+        <div class="th-text2">
+            <p>3営業日以内にお返事いたします。</p>
+            <p><span class="new-line2">恐れ入りますが、</span>返信まで少々お待ちくださいませ。</p>
+            <p><span class="new-line1">お問い合わせについて<span class="new-line2">何かお困りでしたら、</span></span><span class="new-line2">こちらまでご連絡いただけますと</span>幸いです。</p>
+            <p>810sendmrt@gmail.com</p>
+        </div>
+
+        <div class="btn thanks-btn">
+            <a href="index.html">back to Home</a>
+        </div>
+    </main>
+
+    <footer class="works-footer">
+        <div>
+            <p>©︎　Rina Morita</p>
+        </div>
+    </footer>
+
+    <script>
+        window.onload = function() {
+            const spinner = document.getElementById('LOADING');
+            spinner.classList.add('loaded');
+        }
+
+        $(function () {
+            $('.hamburger, .sp-nav a').on('click', function (){
+                $('.sp-nav').fadeToggle();
+                $('.hamburger').toggleClass('open')
+            });
+        });
+    </script>
+</body>
+</html>
