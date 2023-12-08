@@ -35,7 +35,7 @@
                     <li><a href="works.html">Works</a></li>
                     <li><a href="#PROFILE">Profile</a></li>
                     <li><a href="contact.html">Contact</a></li>
-                    <li><a href="">Change</a></li>
+                    <li class="switch-btn">Switch</li>
                     <li><a href=""><img src="imges/insta.png" alt="インスタグラムへのリンク用アイコン"></a></li>
                 </ul>
             </nav>
@@ -48,7 +48,7 @@
                     <li><a href="works.html">Works</a></li>
                     <li><a href="#PROFILE">Profile</a></li>
                     <li><a href="contact.html">Contact</a></li>
-                    <li><a href="">Change</a></li>
+                    <li class="sp-switch-btn">Switch</li>
                     <li><a href=""><img src="imges/insta.png" alt="インスタグラムへのリンク用アイコン"></a></li>
                 </ul>
             </nav>
@@ -65,7 +65,7 @@
             <p>"もりた りな" のポートフォリオサイトをご覧いただき、ありがとうございます。</p>
             <p>私は現在、冊子の編集業務をしています。付随して、取材と記事の執筆や、リーフレットの作成なども行っています。この度、デザインの勉強を兼ねて、スキルアップのためにWebデザイナーを育成する講座を受講しました。</p>
             <p>毎日勉強していく中でWebサイト制作のおもしろさに触れ、学んだことを仕事として取り組みたいと考えるようになりました。このポートフォリオサイトが、そのための第一歩となればいいなと思います。</p>
-            <p>まだまだ勉強したいことは尽きません。どなたかのお役に立てるよう、これからも多方面で勉強を続け、日々ステップアップしていきます！</p>
+            <p>まだまだ勉強したいことは尽きません。どなたかのお役に立てるよう、これからも多方面で勉強を続け、日々ステップアップしていきたいです！</p>
         </div>
 
         <div class="profile1">
@@ -108,21 +108,23 @@
             </div>
     
             <div class="profile2-text">
-                <div>普段のわたし</div>
-                <span class="circ pagepro-circ"></span>
                 <dl>
-                    <dt>趣味</dt>
-                    <dd>幼少期からのピアノを細々と続けています。読書やモノ作りも好きです。子どもとLEGOに夢中になっていたら、日が暮れていた…なんてことも。</dd>
-                    <dt>特技</dt>
-                    <dd>「特技は模写とかお絵かきかな〜」と話す私に、「ご飯を3膳も食べることだね」と友人から辛口コメントが。</dd>
-                    <dt>最近がんばっていること</dt>
-                    <dd>体にやさしいご飯作り、エアリアルヨガ…を楽しむためのストレッチ</dd>
-                    <dt>最後にひとこと</dt>
-                    <dd>家事・送迎・仕事　の三拍子で慌ただしいですが、でも毎日ハッピーです。環境や人間関係に恵まれているおかげだと思います。この感謝の気持ちを、世の中にお返ししていきたいと心に留めて毎日過ごしています。</dd>
+                    <dt>普段のわたし<span class="circ pagepro-circ2"></span></dt>
+                    <dd>
+                        <dl>
+                            <dt>趣味</dt>
+                            <dd>幼少期からのピアノを細々と続けています。読書やモノ作りも好きです。余談ですが、このサイトのイメージ曲はシベリウス作曲の「樅の木」。メニューのSwitchボタン後の世界は、モシュコフスキー「春 Op.57-5」です。ぜひご一緒に。</dd>
+                            <dt>特技</dt>
+                            <dd>「特技は模写とかお絵かきかな〜」と話す私に、「ご飯を3膳も食べることだね」と友人から辛口コメントが。</dd>
+                            <dt>最近がんばっていること</dt>
+                            <dd>体にやさしいご飯作り、エアリアルヨガ…を楽しむためのストレッチ</dd>
+                            <dt>最後にひとこと</dt>
+                            <dd>家事・送迎・仕事　の三拍子で慌ただしいですが、でも毎日ハッピーです。環境や人間関係に恵まれているおかげだと思います。この感謝の気持ちを、世の中にお返ししていきたいと心に留めて毎日を過ごしています。</dd>
+                        </dl>
+                    </dd>
                 </dl>
             </div>
         </div>
-
     </main>
 
     <footer>
@@ -140,7 +142,17 @@
         $(function () {
             $('.hamburger, .sp-nav a').on('click', function (){
                 $('.sp-nav').fadeToggle();
-                $('.hamburger').toggleClass('open')
+                $('.hamburger').toggleClass('open');
+            });
+        
+            $('.switch-btn').click(function () {
+                $('body').toggleClass('white');
+            });
+
+            $('.sp-switch-btn').click(function () {
+                $('body').toggleClass('white');
+                $('.sp-nav').fadeToggle();
+                $('.hamburger').toggleClass('open');
             });
         });
     </script>

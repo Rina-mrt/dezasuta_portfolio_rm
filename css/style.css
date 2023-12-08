@@ -1,5 +1,4 @@
 @charset "utf-8";
-
 /* cssリセット */
 body, h1, h2, h3, ul, li, p {
     margin: 0;
@@ -30,7 +29,7 @@ img {
     width: 100vw;
     height: 100vh;
     transition: all 1s;
-    background-color: #121212;
+    background-color: #012a54;
     position: fixed;
     top: 0;
     left: 0;
@@ -43,7 +42,7 @@ img {
     margin: 35vh auto;
     background-color: #fff;
     border-radius: 100%;
-    animation: sk-scaleout 1.5s infinite ease-in-out;
+    animation: sk-scaleout 2s infinite ease-in-out;
 }
 
 @keyframes sk-scaleout {
@@ -62,40 +61,6 @@ img {
 }
 
 /* -----------------------------------------------------all */
-/* #SWITCH {
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    position: relative;
-} */
-
-/* #SWITCH::before {
-    content: '';
-    display: block;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: #ffffff;
-    position: absolute;
-    top: 14px;
-    left: -20px;
-} */
-
-/* #SWITCH::before.on_switch {
-    content: '';
-    color: #e79999;
-} */
-
-#light {
-    background: url(../imges/background.png) no-repeat center top/cover;
-}
-
-/* #light.on_light {
-    background: url(../imges/background3.png) no-repeat center top/cover;
-} */
-
-
-
 body {
     background: url(../imges/background.png) no-repeat center top/cover;
 }
@@ -176,6 +141,7 @@ h2 {
     display: block;
     position: relative;
     transition: 0.3s;
+    z-index: 888;
 }
   
 .btn a::after {
@@ -186,8 +152,6 @@ h2 {
     width: 100px;
     height: 1px;
     background-color: #ffffff;
-    /* background-image: -webkit-linear-gradient(to left, transparent, #fff 25%, #fff 75%, transparent); */
-    /* background-image: linear-gradient(to right, transparent, #fff 25%, #fff 75%, transparent); */
     transition: 0.3s;
 }
   
@@ -272,7 +236,7 @@ h2 {
 
 /* --------------------------------------------Home concept */
 .con-title {
-    margin-top: 300px;
+    margin-top: -70vh;
     margin-left: 10px;
 }
 
@@ -282,21 +246,30 @@ h2 {
 }
 
 .con-text {
-    font-family: "fot-tsukuaoldmin-pr6n", "游明朝", "Yu Mincho", sans-serif;
     writing-mode: vertical-rl;
-    line-height: 3;
     margin: 170px auto 0;
-    padding-right: 120px;
+    padding-right: 72px;
+}
+
+.con-text h3, .con-text p {
+    font-family: "fot-tsukuaoldmin-pr6n", "游明朝", "Yu Mincho", sans-serif;
+    font-size: 16px;
+    line-height: 3;
+    text-align: left;
+}
+
+.con-text h3 {
+    margin-right: 48px;
 }
 
 .dash {
-    margin-top: -20px;
+    margin-top: -21px;
 }
 
 /* ----------------------------------------------Home works */
 .wo-title{
     text-align: center;
-    margin-top: 300px;
+    margin-top: -60vh;
 }
 
 .wo-j-title {
@@ -360,12 +333,12 @@ h2 {
 }
 
 .wo-btn a {
-    margin: 100px 15% 0 auto;
+    margin: 10px 15% 0 auto;
 }
 
 /* --------------------------------------------Home profile */
 .pro-title {
-    margin-top: 300px;
+    margin-top: -60vh;
     margin-right: 13%;
     text-align: right;
 }
@@ -433,13 +406,8 @@ h2 {
 }
 
 .skills div {
-    max-width: 25%;
+    width: 250px;
     margin: 50px auto 0;
-}
-.skills img {
-    /* display: block; */
-    /* width: 21%; */
-    /* margin: 30px auto 0; */
 }
 
 .pro-btn a {
@@ -449,7 +417,7 @@ h2 {
 /* ---------------------------------------------Home contact */
 .cont-title{
     text-align: center;
-    margin-top: 300px;
+    margin-top: -60vh;
 }
 
 .cont-j-title {
@@ -478,6 +446,11 @@ footer p {
     text-align: center;
     line-height: 150px;
 }
+
+.home-footer {
+    margin-top: 0;
+}
+
 
 /* ----------------------------------------------page Works */
 /* ---------------------------------------tab */
@@ -521,18 +494,14 @@ footer p {
 }
 
 /* --------------------------------HP・LP list */
-h3 {
-    padding-right: 10px;
-}
-
 .tracing-paper4 {
     width: 73vw;
     padding-bottom: 40px;
     background:rgba(255,255,255,0.3);
-    margin: 300px auto 0;
+    margin: 250px auto 0;
 }
 
-.first {
+.trpa-first {
     margin-top: 100px;
 }
 
@@ -548,6 +517,7 @@ h3 {
 }
 
 .name-h {
+    font-size: 18px;
     line-height: 1.56;
     margin-left: 5px;
 }
@@ -576,27 +546,26 @@ h3 {
     text-align: center;
 }
 
-.ex1 {
-    /* display: flex; */
-    margin-top: 75px;
-    font-size: 16px;
+.work-explanation dl {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 65px;
 }
 
-.ex1 dt, .ex1 dd {
-    display: inline-block;
-}
-
-.ex1 dt {
-    line-height: 50px;
+.work-explanation dt {
+    width: 25%;
+    padding: 20px;
     border: 1px solid #ffffff;
-    width: 250px;
-    height: 50px;
-    text-align: center;
+    margin: 0 0 40px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.ex1 dd {
+.work-explanation dd {
     width: 65%;
-    margin-left: 80px;
+    padding-left: 10px;
+    margin: 0 auto;
     text-align: justify;
 }
 
@@ -619,7 +588,7 @@ h3 {
     margin-top: 30px;
 }
 
-.works-btn a {
+.works-btn1 a {
     margin: 200px auto 0;
 }
 
@@ -643,13 +612,12 @@ h3 {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(18,18,18,0.8);
 }
 
 .open-modal {
     position: absolute;
     top: 390px;
-    /* background-color: rgba(0,0,0,0.8); */
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -788,6 +756,7 @@ h3 {
 }
 
 .profile2 {
+    margin-top: 150px;
     margin: 200px 15% 0 5%;
     display: flex;
     justify-content: space-around;
@@ -801,6 +770,11 @@ h3 {
     margin-left: 8%;
 }
 
+.pagepro-circ2 {
+    margin-left: -120px;
+
+}
+
 .profile2 dl dt {
     margin-top: 60px;
     text-decoration: underline 3px solid rgba(255, 255, 255, 0.7);
@@ -808,6 +782,10 @@ h3 {
 
 .profile2 dl dd {
     margin-top: 10px;
+}
+
+.profile2 dl dt:nth-child(1) {
+    text-decoration: none;
 }
 
 /* ---------------------------------------------page Contact */
@@ -861,22 +839,64 @@ textarea {
 }
 
 /* ---------------------------------------------page Thanks */
-.th-text1 {
+.th-page-j-title {
     margin-top: -20px;
 }
 
-.th-text2 {
+.th-text1 {
     text-align: center;
     margin-top: 120px;
 }
 
-.th-text2 p {
+.th-text1 p {
     margin-top: 80px;
 }
 
 .thanks-btn a {
     margin: 200px auto 0;
 }
+
+
+/* -------------------------------------------------white ver. */
+.white {
+    background: url(../imges/background3.png) no-repeat center top/cover;
+}
+
+.white h1, .white h2, .white h3, .white ul, .white li, .white p, .white .btn a {
+    color: #645555;
+}
+
+.white .item {
+    position: absolute;
+    transform: translate(-50%, 0);
+    width: 15px;
+    height: 20px;
+    margin: 0 auto;
+    border-radius: 0% 70%;
+    background: rgba(237, 181, 181, 0.8);
+    opacity: 0;
+}
+
+.white .tracing-paper1, .white .tracing-paper2 {
+    background: rgba(244, 199, 187, 0.3);
+}
+
+.white .btn a::after {
+    background-color: #645555;
+}
+
+.white .btn a {
+    border-color: #645555;
+}
+
+.white .scroll-text {
+    color: #ffffff;
+}
+
+.white footer {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
 
 /* -----------------------------------------------hamburger */
 .hamburger {
@@ -897,14 +917,18 @@ textarea {
     .j-title {
         margin-top: -60px;
     }
+
+    .page-j-title {
+        margin-top: -35px;
+    }
     
     /* Home */
     .con-j-title {
         margin-left: 20%;
     }
 
-    .con-text {
-        line-height: 2.5;
+    .con-text h3 {
+        margin-right: 30px;
     }
 
     .pro-circ {
@@ -917,7 +941,7 @@ textarea {
     }
 
     /* page Thanks */
-    .th-text1 {
+    .th-page-j-title {
         margin-top: -15px;
     }
     
@@ -1009,9 +1033,14 @@ textarea {
         color: #ffffff;
         font-size: 18px;
         text-align: center;
-        padding: 20px 0;
         cursor: pointer;
         z-index: 99999;
+    }
+
+    .sp-nav ul li a, .sp-switch-btn {
+        padding: 20px 40px;
+        margin-bottom: 5px;
+        display: block;
     }
 
     .sp-nav-list img {
@@ -1021,10 +1050,13 @@ textarea {
     /* home concept */
     .con-text {
         writing-mode: horizontal-tb;
-        line-height: 2.5;
-        margin-right: 13%;
-        margin-left: 13%;
+        margin: 120px 13% 0;
         padding: 0;
+    }
+
+    .con-text h3 {
+        margin-top: 30px;
+        margin-right: 0;
     }
 
     .dash {
@@ -1034,7 +1066,7 @@ textarea {
 
 /* -------------------------------------------------break point 767 */
 @media screen and (max-width: 767px) {
-    .new-line1 {
+    .new-line767 {
         display: block;
     }
 
@@ -1052,16 +1084,16 @@ textarea {
     }
 
     .page-j-title {
-        margin-top: -40px;
+        margin-top: -30px;
+    }
+
+    .btn a {
+        padding: 14px 30px;
     }
 
     /* home */
     .header-text {
         margin: 10% auto 0;
-    }
-
-    .con-text {
-        line-height: 2;
     }
 
     .hplp-mockup {
@@ -1098,16 +1130,16 @@ textarea {
     .skills {
         margin: 100px auto 0;
     }
-    
-    .skills div {
-        margin: 50px auto 100px;
-    }
 
     .pro-btn a {
         margin: 200px auto 0;
     }
 
     /* page Works */
+    .tab > label {
+        padding: 14px 15px 12px;
+    }
+
     .ex1 {
         display: block;
     }
@@ -1156,18 +1188,18 @@ textarea {
     }
 
     /* page Thanks */
-    .th-text1 {
+    .th-page-j-title {
         margin-top: -10px;
     }
 
-    .th-text2 {
+    .th-text1 {
         line-height: 3;
     }
 }
 
 /* -------------------------------------------------break point 415 */
 @media screen and (max-width: 415px) {
-    .new-line2 {
+    .new-line415 {
         display: block;
     }
 
@@ -1176,7 +1208,6 @@ textarea {
     }
     
     .btn a {
-        padding: 10px 30px;
         width: 200px;
         margin: 0 auto;
     }
@@ -1191,18 +1222,27 @@ textarea {
         transform: translateX(50px);
     }
 
-    .con-text {
-        line-height: 1.5;
+    .con-text h3, .con-text p {
+        font-size: 15px;
+        line-height: 2;
     }
 
     /* page Works */
     .window1 .window-inner .pc-full, .window3 .window-inner .pc-full {
         display: none;
     }
-
+    
     .cross {
-        top: 10px;
-        right: 70px;
+        top: 5px;
+        right: 40px;
+    }
+
+    .cross span {
+        padding: 0;
+        padding-top: 20px;
+        padding-left: 5px;
+        padding-bottom: 5px;
+        background-color: rgba(18,18,18,0.8);
     }
 
     .window .window-inner img {
@@ -1213,10 +1253,219 @@ textarea {
     /* page Thanks */
     .th-page-title {
         line-height: 0.7;
+        margin-top: 120px;
     }
 
-    .th-text1 {
+    .th-page-j-title {
         font-size: 16px;
         margin-top: 20px;
     }
 }
+
+/* -------------------------------------------------falling */
+.fall-wrapper {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    margin: -50px auto 0;
+    text-align: center;
+}  
+
+.fall-last {
+    height: 40vh;
+    overflow: hidden;
+}
+/* .text {
+    padding: 20px;
+    color: #ffffff;
+} */  
+.fall-area {
+    width: 100%;
+}
+
+.item {
+    position: absolute;
+    /* left: 50%; */
+    transform: translate(-50%, 0);
+    width: 20px;
+    height: 20px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.8);
+    opacity: 0;
+}
+  
+@keyframes fall {
+    from {
+      opacity: 0;
+      top: -50px;
+    }
+  
+    20% {
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+      top: 100vh;
+    }
+}
+  
+@keyframes sway1 {
+    from {
+      transform: translate3d(0px, 0px, 0px) rotate(0deg);
+    }
+  
+    25% {
+      transform: translate3d(-50px, 0px, 0px) rotate(-10deg);
+    }
+  
+    75% {
+      transform: translate3d(50px, 0px, 0px) rotate(10deg);
+    }
+  
+    to {
+      transform: translate3d(0px, 0px, 0px) rotate(0deg);
+    }
+}
+@keyframes sway2 {
+    from {
+      transform: translate3d(0px, 0px, 0px) rotate(0deg);
+    }
+  
+    25% {
+      transform: translate3d(50px, 0px, 0px) rotate(10deg);
+    }
+  
+    75% {
+      transform: translate3d(-50px, 0px, 0px) rotate(-10deg);
+    }
+  
+    to {
+      transform: translate3d(0px, 0px, 0px) rotate(0deg);
+    }
+}
+  
+@keyframes sway3 {
+    from {
+      transform: translate3d(0px, 0px, 0px) rotate(40deg);
+    }
+  
+    25% {
+      transform: translate3d(50px, 0px, 0px) rotate(20deg);
+    }
+  
+    75% {
+      transform: translate3d(-50px, 0px, 0px) rotate(-20deg);
+    }
+  
+    to {
+      transform: translate3d(0px, 0px, 0px) rotate(0deg);
+    }
+}
+  
+.js-scroll-fall.is-animated .item:nth-child(1) {
+    left: 50%;
+    animation: fall 4s linear infinite, sway1 4s infinite ease-in-out alternate;
+}
+  
+.js-scroll-fall.is-animated .item:nth-child(2) {
+    left: 63%;
+    animation: fall 4s linear infinite, sway2 4s infinite ease-in-out alternate;
+    animation-delay: 0.3s;
+}
+  
+.js-scroll-fall.is-animated .item:nth-child(3) {
+    left: 40%;
+    transform: translate3d(0px, 0px, 0px) rotate(90deg);
+    animation: fall 4s linear infinite, sway1 4s infinite ease-in-out alternate;
+    animation-delay: 0.5s;
+}
+  
+.js-scroll-fall.is-animated .item:nth-child(4) {
+    left: 35%;
+    transform: translate3d(0px, 0px, 0px) rotate(120deg);
+    animation: fall 4s linear infinite, sway2 4s infinite ease-in-out alternate;
+    animation-delay: 0.7s;
+}
+  
+.js-scroll-fall.is-animated .item:nth-child(5) {
+    left: 70%;
+    transform: translate3d(0px, 0px, 0px) rotate(60deg);
+    animation: fall 4s linear infinite, sway1 4s infinite ease-in-out alternate;
+    animation-delay: 0.9s;
+}
+  
+.js-scroll-fall.is-animated .item:nth-child(6) {
+    left: 82%;
+    transform: translate3d(0px, 0px, 0px) rotate(30deg);
+    animation: fall 4s linear infinite, sway2 4s infinite ease-in-out alternate;
+    animation-delay: 1s;
+}
+  
+.js-scroll-fall.is-animated .item:nth-child(7) {
+    left: 24%;
+    transform: translate3d(0px, 0px, 0px) rotate(-65deg);
+    animation: fall 4s linear infinite, sway1 4s infinite ease-in-out alternate;
+    animation-delay: 1.7s;
+}
+  
+.js-scroll-fall.is-animated .item:nth-child(8) {
+    left: 55%;
+    transform: translate3d(0px, 0px, 0px) rotate(40deg);
+    animation: fall 4s linear infinite, sway2 4s infinite ease-in-out alternate;
+    animation-delay: 1.3s;
+}
+  
+.js-scroll-fall.is-animated .item:nth-child(9) {
+    left: 15%;
+    transform: translate3d(0px, 0px, 0px) rotate(-30deg);
+    animation: fall 4s linear infinite, sway2 4s infinite ease-in-out alternate;
+    animation-delay: 1.5s;
+}
+  
+.js-scroll-fall.is-animated .item:nth-child(10) {
+    left: 65%;
+    transform: translate3d(0px, 0px, 0px) rotate(-135deg);
+    animation: fall 4s linear infinite, sway2 4s infinite ease-in-out alternate;
+    animation-delay: 1.7s;
+}
+  
+.js-scroll-fall.is-animated .item:nth-child(11) {
+    left: 60%;
+    transform: translate3d(0px, 0px, 0px) rotate(135deg);
+    animation: fall 4s linear infinite, sway3 4s infinite ease-in-out alternate;
+    animation-delay: 1.9s;
+}
+  
+.js-scroll-fall.is-animated .item:nth-child(12) {
+    left: 53%;
+    transform: translate3d(0px, 0px, 0px) rotate(-120deg);
+    animation: fall 4s linear infinite, sway1 4s infinite ease-in-out alternate;
+    animation-delay: 2.5s;
+}
+  
+.js-scroll-fall.is-animated .item:nth-child(13) {
+    left: 40%;
+    transform: translate3d(0px, 0px, 0px) rotate(-120deg);
+    animation: fall 4s linear infinite, sway3 4s infinite ease-in-out alternate;
+    animation-delay: 0.3s;
+}
+  
+.js-scroll-fall.is-animated .item:nth-child(14) {
+    left: 35%;
+    transform: translate3d(0px, 0px, 0px) rotate(-120deg);
+    animation: fall 4s linear infinite, sway1 4s infinite ease-in-out alternate;
+    animation-delay: 3.0s;
+}
+  
+.js-scroll-fall.is-animated .item:nth-child(15) {
+    left: 30%;
+    transform: translate3d(0px, 0px, 0px) rotate(120deg);
+    animation: fall 4s linear infinite, sway3 4s infinite ease-in-out alternate;
+    animation-delay: 3.3s;
+}
+
+
+
+
